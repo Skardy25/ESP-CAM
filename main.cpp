@@ -9,10 +9,10 @@
 #include "soc/rtc_cntl_reg.h"
 #include "esp_camera.h"
 
-const char* ssid     = "mercadografico";
-const char* password = "maklero,";
-String token = "7711990185:AAGdHGfWNf0ZMD726zYS2ua5KTpcUfmtkKg";
-String chat_id = "1671881238";
+const char* ssid     = "";
+const char* password = "";
+String token = "";
+String chat_id = "";
 
 
 //CAMERA_MODEL_AI_THINKER
