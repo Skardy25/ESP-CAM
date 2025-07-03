@@ -3,10 +3,10 @@
 #include <ArduinoJson.h>
 
 // === CONFIGURACIÓN ===
-const char* ssid = "MartinRouterKing";
-const char* password = "Lan_Solo";
-const String BOT_TOKEN = "7711990185:AAGdHGfWNf0ZMD726zYS2ua5KTpcUfmtkKg"; // Tu token
-const String CHAT_ID = "1671881238"; // Tu chat ID
+const char* ssid = "";
+const char* password = "";
+const String BOT_TOKEN = ""; // Tu token
+const String CHAT_ID = ""; // Tu chat ID
 
 const int pirPin = 13;       // Pin del sensor PIR
 const int alarmPin = 4;      // Pin para activar la alarma (conectado a la base del transistor)
