@@ -4,8 +4,6 @@
 #include <ArduinoJson.h>
 #include <base64.h>
 
-//MartinRouterKing
-//Lan_Solo
 // === CONFIGURACIÓN ===
 const char* ssid = "";
 const char* password = "";
