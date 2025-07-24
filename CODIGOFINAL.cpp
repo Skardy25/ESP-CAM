@@ -7,10 +7,10 @@
 //MartinRouterKing
 //Lan_Solo
 // === CONFIGURACIÓN ===
-const char* ssid = "MartinRouterKing";
-const char* password = "Lan_Solo";
-const String BOT_TOKEN = "7711990185:AAGdHGfWNf0ZMD726zYS2ua5KTpcUfmtkKg"; // Tu token
-const String CHAT_ID = "1671881238"; // Tu chat ID
+const char* ssid = "";
+const char* password = "";
+const String BOT_TOKEN = ""; // Tu token
+const String CHAT_ID = ""; // Tu chat ID
 
 // URL de tu API
 const char* serverUrl = "https://api-person-detection.onrender.com/upload-base64"; // Cambia por tu IP y puerto
