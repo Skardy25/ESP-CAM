@@ -4,11 +4,13 @@
 #include <ArduinoJson.h>
 #include <base64.h>
 
+//MartinRouterKing
+//Lan_Solo
 // === CONFIGURACIÓN ===
-const char* ssid = "";
-const char* password = "";
-const String BOT_TOKEN = ""; // Tu token
-const String CHAT_ID = ""; // Tu chat ID
+const char* ssid = "MartinRouterKing";
+const char* password = "Lan_Solo";
+const String BOT_TOKEN = "7711990185:AAGdHGfWNf0ZMD726zYS2ua5KTpcUfmtkKg"; // Tu token
+const String CHAT_ID = "1671881238"; // Tu chat ID
 
 // URL de tu API
 const char* serverUrl = "https://api-person-detection.onrender.com/upload-base64"; // Cambia por tu IP y puerto
@@ -102,6 +104,7 @@ void loop() {
   int pirValue = digitalRead(pirPin);
 
   if (pirValue == HIGH && !motionDetected) {
+    digitalWrite(alarmPin, HIGH);
     Serial.println("🚨 Movimiento detectado!");
 
      camera_fb_t *fb = esp_camera_fb_get();
@@ -132,10 +135,13 @@ void loop() {
       deserializeJson(doc, response);
       int responseCode = doc["code"];
 
+      delay(2000); // 0.5 segundos de alarma activa
+      digitalWrite(alarmPin, LOW);
+
       if (responseCode == 1004) {
         digitalWrite(alarmPin, HIGH);
         Serial.println("🔊 Alarma activada (personas detectadas)");
-        delay(3000); // 3 segundos de alarma activa
+        delay(3500); // 3 segundos de alarma activa
         digitalWrite(alarmPin, LOW);
       }
 
